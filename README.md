@@ -1,0 +1,2 @@
+# cai-practices
+Practice repository
