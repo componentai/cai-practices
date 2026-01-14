@@ -20,6 +20,17 @@ We will try to follow [Diàtaxis](https://diataxis.fr/) principles and devide do
     - Learning-oriented
     - Serves the user's acquisition of skills and knowledge (not solving a specific problem)
 
+## Tooling
+
+### Documentation Generator
+Use [MkDocs](https://www.mkdocs.org/) for documentation sites. API documentation is auto-generated via [mkdocstrings](https://mkdocstrings.github.io/).
+
+### Cross-references
+Use MkDocs autorefs format for cross-references: `[package.module.function][]`
+
+### Per-package Documentation
+Documentation lives per-package. Each package maintains its own `docs/` folder and MkDocs configuration.
+
 ## Linting
 Use the [Ruff linter](https://docs.astral.sh/ruff/linter/) with "google" convention for docstring style. 
 
@@ -54,7 +65,9 @@ Docstrings SHOULD follow [Google's styleguide](https://google.github.io/stylegui
 All public functions MUST have an example in their docstring. The example MAY be self-contained, but the intention of the example is to showcase how to use the function. 
 Internal functions SHOULD have an example in their docstring.
 
-Read more on references [here](todo).
+Examples SHOULD be runnable with `doctest`. Hardware-dependent examples SHOULD use CPU fallback when possible. If no CPU fallback exists, examples MAY be illustrative only. Read more on `doctest` [here](https://docs.python.org/3/library/doctest.html). 
+
+Read more on references [here](references.md). For FFI-specific guidance, see [ffi.md](ffi.md).
 
 ## Explanations
 You MUST NOT include explanations in references (docstrings). Explanations MAY be written in inline comments as well. 
@@ -65,14 +78,41 @@ Inline comments SHOULD replace the need for explaining something at a code revie
 ### Long-form explanations
 Long-form explanations SHOULD be placed in the `docs/` folder. Explanations could for example include mathemical derivations or explanations of complex procedures. For example "How the kernel smoothing procedure works". Explanations are written for humans to increase insight into a subject.
 
-Read more on explanations [here](todo).
+Read more on explanations [here](explanations.md).
 
 ## How-to guides 
 How-to guides and long-form examples SHOULD be placed in `examples/`. How-to guides SHOULD focues on solving a concrete goal, for example "How to cut a mesh with `cai-geometry`". The purpose of such a guide is to help the already-competent user (in your library) perform a particular task correctly.
 
-Read more on how-to guides [here](todo).
+Read more on how-to guides [here](how-to-guides.md).
 
 ## Tutorials
 A tutorial's purpose is to help the user acquire competance. In contrast to how-to guides, tutorials do not assume familiarity with the package. All libraries SHOULD contain a `Getting Started` tutorial, which SHOULD be placed in the `README`. The tutorial MUST be _explicit about the basics_. 
 
-Read more on tutorials [here](todo).
+Read more on tutorials [here](tutorials.md).
+
+## Deprecation
+
+When deprecating functions:
+
+1. Use `warnings.warn()` with `DeprecationWarning` in the function body
+2. Start the docstring summary with "Deprecated:"
+3. Include the version deprecated and the alternative function
+
+**Example:**
+```python
+def old_function():
+    """Deprecated: Use new_function instead.
+    
+    Deprecated since v1.2.0. Will be removed in v2.0.0.
+    """
+    warnings.warn(
+        "old_function is deprecated, use new_function",
+        DeprecationWarning,
+        stacklevel=2
+    )
+```
+
+## AI Guidance
+
+AI assistants writing documentation MUST default to [Google's styleguide](https://google.github.io/styleguide/pyguide.html) for docstrings. AI MUST follow conventions in the `documentation/` folder when they exist, as these take precedence over general style guides. AI SHOULD check `cai-practices` before writing documentation to ensure consistency.
+
