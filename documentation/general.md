@@ -62,7 +62,7 @@ Internal functions SHOULD have an example in their docstring.
 
 Examples SHOULD be runnable with `doctest`. Hardware-dependent examples SHOULD use CPU fallback when possible. If no CPU fallback exists, examples MAY be illustrative only. Read more on `doctest` [here](https://docs.python.org/3/library/doctest.html). 
 
-Read more on references [here](../diataxis/references.md). For FFI-specific guidance, see [ffi.md](ffi.md).
+Read more on references [here](diataxis/references.md). For FFI-specific guidance, see [guides/ffi.md](guides/ffi.md).
 
 ## Explanations
 You MUST NOT include explanations in references (docstrings). Explanations MAY be written in inline comments as well. 
@@ -73,21 +73,21 @@ Inline comments SHOULD replace the need for explaining something at a code revie
 ### Long-form explanations
 Long-form explanations SHOULD be placed in the `docs/` folder. Explanations could for example include mathematical derivations or explanations of complex procedures. For example "How the kernel smoothing procedure works". Explanations are written for humans to increase insight into a subject.
 
-Read more on explanations [here](../diataxis/explanations.md).
+Read more on explanations [here](diataxis/explanations.md).
 
 ## How-to guides 
 How-to guides and long-form examples SHOULD be placed in `examples/`. How-to guides SHOULD focus on solving a concrete goal, for example "How to cut a mesh with `cai-geometry`". The purpose of such a guide is to help the already-competent user (in your library) perform a particular task correctly.
 
 How-to guides MAY be written as Jupyter notebooks, scripts, or something third. Usually, a notebook will be the best choice.
 
-Read more on how-to guides [here](../diataxis/how-to-guides.md).
+Read more on how-to guides [here](diataxis/how-to-guides.md).
 
 ## Tutorials
 A tutorial's purpose is to help the user acquire competence. In contrast to how-to guides, tutorials do not assume familiarity with the package. All libraries SHOULD contain a `Getting Started` tutorial, which SHOULD be placed in the `README`. The tutorial MUST be _explicit about the basics_. 
 
 If you are about to write a tutorial, ask yourself: _Am I really about to write a how-to guide?_ 
 
-Read more on tutorials [here](../diataxis/tutorials.md).
+Read more on tutorials [here](diataxis/tutorials.md).
 
 ## Deprecation
 
