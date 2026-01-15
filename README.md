@@ -7,7 +7,7 @@ Documentation follows the [Diátaxis](https://diataxis.fr/) framework.
 ## Table of Contents
 
 ### Guides
-- [Documentation Style Guide](documentation/guides/general.md) - Main style guide and rules
+- [Documentation Style Guide](documentation/general.md) - Main style guide and rules
 - [FFI Documentation](documentation/guides/ffi.md) - Documenting foreign function interfaces
 
 ### Diátaxis Reference
