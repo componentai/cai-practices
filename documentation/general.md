@@ -1,5 +1,7 @@
 # Documentation style guide
 
+**version: 0.1.0**
+
 This style guide for documentation is primarily written for Python, but principles apply to all languages written, if possible.
 In this document, "function" means a function, method, generator, or property.
 
