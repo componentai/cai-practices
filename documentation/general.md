@@ -71,7 +71,7 @@ You MUST NOT include explanations in references (docstrings). Explanations MAY b
 Inline comments SHOULD replace the need for explaining something at a code review. See inline comments as explanations of complex operations or non-obvious lines of code. Inline comments MUST NOT replace docstrings. Use `TODO` comments for code that is temporary, a short-term solution, or good-enough but not perfect.
 
 ### Long-form explanations
-Long-form explanations SHOULD be placed in the `docs/` folder. Explanations could for example include mathemical derivations or explanations of complex procedures. For example "How the kernel smoothing procedure works". Explanations are written for humans to increase insight into a subject.
+Long-form explanations SHOULD be placed in the `docs/` folder. Explanations could for example include mathematical derivations or explanations of complex procedures. For example "How the kernel smoothing procedure works". Explanations are written for humans to increase insight into a subject.
 
 Read more on explanations [here](../diataxis/explanations.md).
 
