@@ -57,10 +57,10 @@ Every function or class MAY have a docstring. Every function or class that has o
 Docstrings SHOULD follow [Google's styleguide](https://google.github.io/styleguide/pyguide.html). 
 
 #### Examples
-All public functions MUST have an example in their docstring. The example MAY be self-contained, but the intention of the example is to showcase how to use the function. 
+All public functions and API endpoints MUST have an example in their docstring. The example SHOULD be self-contained, but the intention of the example is to showcase how to use the function. 
 Internal functions SHOULD have an example in their docstring.
 
-Examples SHOULD be runnable with `doctest`. Hardware-dependent examples SHOULD use CPU fallback when possible. If no CPU fallback exists, examples MAY be illustrative only. Read more on `doctest` [here](https://docs.python.org/3/library/doctest.html). 
+Examples SHOULD be runnable with `doctest`. Hardware-dependent examples SHOULD use CPU fallback when possible. If no CPU fallback exists, examples MUST be skipped, but MUST NOT be removed. Read more on `doctest` [here](https://docs.python.org/3/library/doctest.html). 
 
 Read more on references [here](diataxis/references.md). For FFI-specific guidance, see [guides/ffi.md](guides/ffi.md).
 
