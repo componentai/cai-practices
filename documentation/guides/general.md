@@ -24,17 +24,6 @@ We will try to follow [Diátaxis](https://diataxis.fr/) principles and divide do
 
 Key words "MUST", "MUST NOT", "SHOULD", "SHOULD NOT", and "MAY" are used per [RFC 2119](https://datatracker.ietf.org/doc/html/rfc2119).
 
-## Tooling
-
-### Documentation Generator
-Use [MkDocs](https://www.mkdocs.org/) for documentation sites. API documentation is auto-generated via [mkdocstrings](https://mkdocstrings.github.io/).
-
-### Cross-references
-Use MkDocs autorefs format for cross-references: `[package.module.function][]`
-
-### Per-package Documentation
-Documentation lives per-package. Each package maintains its own `docs/` folder and MkDocs configuration.
-
 ## Linting
 Use the [Ruff linter](https://docs.astral.sh/ruff/linter/) with "google" convention for docstring style. 
 
@@ -125,9 +114,8 @@ def old_function():
 When maintaining documentation across multiple package versions:
 
 1. Documentation lives with code in the same branch/tag
-2. Use MkDocs [mike](https://github.com/jimporter/mike) for multi-version doc sites
-3. Mark version-specific behavior explicitly: "Added in v1.2.0" or "Changed in v2.0.0"
-4. Keep a CHANGELOG.md following [Keep a Changelog](https://keepachangelog.com/) format
+2. Mark version-specific behavior explicitly: "Added in v1.2.0" or "Changed in v2.0.0"
+3. Keep a CHANGELOG.md following [Keep a Changelog](https://keepachangelog.com/) format
 
 ## AI Guidance
 

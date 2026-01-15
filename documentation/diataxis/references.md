@@ -46,9 +46,8 @@ The documentation structure should **mirror the product structure**, allowing us
 
 Examples illustrate reference material without becoming distracting. Usage examples are a succinct way to show context without falling into explaining or instructing.
 
-### 5. mkdocstrings Compatibility
-
-Docstrings are auto-rendered via [mkdocstrings](https://mkdocstrings.github.io/). Formatting matters! Ensure docstrings follow Google style consistently so they render correctly in generated documentation.
+### 5. Formatting
+Ensure docstrings follow Google style consistently.
 
 ## Language of Reference Guides
 
