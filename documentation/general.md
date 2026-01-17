@@ -33,8 +33,12 @@ Use the [Ruff linter](https://docs.astral.sh/ruff/linter/) with "google" convent
 Follow [Google's styleguide](https://google.github.io/styleguide/pyguide.html) for specifics on how to format.
 
 ## Documentation folder structure
-In `docs/`: All stand-alone documentation (references) as well as explanations, design choices, standards, etc. Anything that cannot or SHOULD NOT be documented in the code itself.
-In `examples/`: Long-form examples, tutorials, and how-to guides. 
+In `docs/`: All stand-alone documentation (references) as well as explanations, design choices, standards, etc. Anything that cannot or SHOULD NOT be documented in the code itself. The `docs/` folder SHOULD contain subfolders:
+- `references/`: Generated API documentation or references for non-code elements (CLI commands, config file schemas, environment variables)
+- `explanations/`: Long-form explanations, mathematical derivations, design rationale
+- `tutorials/`: Learning-oriented content for acquiring skills and knowledge  
+- `how-to-guides/`: Goal-oriented guides for solving specific problems
+
 
 ## References
 References SHOULD primarily be written in docstrings. 
