@@ -80,7 +80,7 @@ Long-form explanations SHOULD be placed in the `docs/` folder. Explanations coul
 Read more on explanations [here](diataxis/explanations.md).
 
 ## How-to guides 
-How-to guides and long-form examples SHOULD be placed in `examples/`. How-to guides SHOULD focus on solving a concrete goal, for example "How to cut a mesh with `cai-geometry`". The purpose of such a guide is to help the already-competent user (in your library) perform a particular task correctly.
+How-to guides SHOULD be placed in `how-to-guides/`. How-to guides SHOULD focus on solving a concrete goal, for example "How to cut a mesh with `cai-geometry`". The purpose of such a guide is to help the already-competent user (in your library) perform a particular task correctly.
 
 How-to guides MAY be written as Jupyter notebooks, scripts, or something third. Usually, a notebook will be the best choice.
 
